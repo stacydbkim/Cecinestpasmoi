@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>scratch scratch!</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="./css/style2.css" />
+<body onclick="navigate()">
+    <script>
+      document.addEventListener("click", function() {
+        window.location.href = "./ppt2-3.html";
+      });
+    </script>
+
+<body>
+    <video id="myVidPlayer" muted autoplay style="opacity: 100%;"></video>
+</video>
+    <script type="text/javascript">
+    //Selector for your <video> element
+    const video = document.querySelector('#myVidPlayer');
+
+    //Core
+    window.navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+            video.srcObject = stream;
+            video.onloadedmetadata = (e) => {
+                video.play();
+            };
+        })
+        .catch( () => {
+            alert('You must give permission to run webcam and mic for it to work ;( ');
+        });     
+
+</script>
+</head>
+</body>
+
+</html>

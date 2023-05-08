@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Home 2</title>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=Rubik+Pixels&family=Syne+Mono&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="./js/script.js"></script>
+   </head>
+<style>
+body {
+	background-color: #000000; /* set the background color to black */
+	font-family: 'Rubik Pixels', cursive;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	cursor: help;
+}
+
+#title {
+	font-size: 5rem;
+	color: #ffffff;
+	text-align: center;
+	position: absolute
+}
+
+button:hover {
+  cursor: default;
+}
+
+#bttn {
+	position: absolute;
+	top: calc(50% + 100px);
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 12pt;
+}
+
+</style>
+
+<div id="title">
+	Ceci n'est pas moi.
+</div>
+<button id="bttn" onclick="window.location.href='./ppt2-3.html'"">Qui es-tu?</button>

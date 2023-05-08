@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ai page</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="refresh" content="30; url=./ppt2-8.html">
+  <script type="text/javascript" src="./js/script.js"></script>
+
+  <style>
+    body {
+      background-color: #000000; /* set the background color to black */
+      margin: 0; /* remove any default margin */
+    }
+
+      video {
+      transform: perspective(20px) rotateX(5deg);
+      border-radius: 100%; /* make the video element circular */
+      overflow: hidden; /* hide any content that overflows the circular boundary */
+    }
+
+    #myVidPlayer {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -2;
+    }
+
+
+    #background-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      z-index: -3;
+    }
+  </style>
+</head>
+<body>
+  <video id="myVidPlayer" muted autoplay style="opacity: 100%;"></video>
+  <img id="background-img" src="./sources/spacephoto.webp" frameborder="0">
+
+  <script type="text/javascript">
+    //Selector for your <video> element
+    const video = document.querySelector('#myVidPlayer');
+
+    //Core
+    window.navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+            video.srcObject = stream;
+            video.onloadedmetadata = (e) => {
+                video.play();
+            };
+        })
+        .catch(() => {
+            alert('You must give permission to run webcam and mic for it to work ;( ');
+        });
+
+    // Function to request camera permission from user
+    function requestCameraPermission() {
+      // Check if the user has already granted permission
+      if (localStorage.getItem('cameraPermission') === 'granted') {
+        // Permission has already been granted, do nothing
+        console.log('Camera permission already granted');
+      } else {
+        // Request permission from the user
+        navigator.mediaDevices.getUserMedia({ video: true })
+          .then(stream => {
+            // Permission granted, save the user's response
+            localStorage.setItem('cameraPermission', 'granted');
+            // Release the camera stream
+            stream.getTracks().forEach(track => track.stop());
+          })
+          .catch(error => {
+            // Permission denied, save the user's response
+            localStorage.setItem('cameraPermission', 'denied');
+            console.error('Camera permission denied', error);
+          });
+      }
+    }
+
+    // Call requestCameraPermission() when the page loads
+    window.onload = requestCameraPermission;
+
+  </script>
+</body>
+</html>

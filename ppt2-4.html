@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>dance</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="./css/ppt2-4.css"/>
+  <script type="text/javascript" src="./js/script.js"></script>
+  <meta http-equiv="refresh" content="30; url=./ppt2-5.html">
+  <style>
+    body {
+      background-color: #000000; /* set the background color to black */
+      margin: 0; /* remove any default margin */
+    }
+    #background-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      z-index: -1;
+      opacity: 40%;
+      background-blend-mode: multiply;
+    }
+
+
+    #techno-me{
+      width: 130%;
+      height: 130%;
+      object-fit: cover;
+      position: absolute;
+      z-index: -1;
+      background-blend-mode: overlay;
+      opacity: 70%;
+      transform: translateX(-20%);
+    }
+
+    html, body {
+  cursor: none;
+}
+
+@keyframes disco {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+  </style>
+</head>
+<body>
+  <img id="background-img" src="./sources/child-dance.gif" frameborder="0">
+  <img id="techno-me" src="./sources/technome.gif" frameborder="0">
+
+<script>
+  // create a div element for the disco ball cursor
+const discoBallCursor = document.createElement('div');
+discoBallCursor.style.position = 'absolute';
+discoBallCursor.style.zIndex = '9999';
+discoBallCursor.style.width = '30px';
+discoBallCursor.style.height = '30px';
+discoBallCursor.style.borderRadius = '50%';
+discoBallCursor.style.background = 'none'
+discoBallCursor.style.mixBlendMode = 'overlay';
+discoBallCursor.style.opacity = '100%';
+discoBallCursor.style.boxShadow = '0 0 10px rgba(5, 0, 255, 0.5), 0 0 20px rgba(5, 0, 255, 0.5), 0 0 30px rgba(5, 0, 255, 0.5), 0 0 40px rgba(5, 0, 255, 0.5), 0 0 70px rgba(5, 0, 255, 0.5)';
+discoBallCursor.style.animation = 'disco 1s infinite';
+
+// add the disco ball cursor to the body
+document.body.appendChild(discoBallCursor);
+
+// update the position of the disco ball cursor on mouse move
+document.addEventListener('mousemove', (event) => {
+  const centerX = window.innerWidth / 1;
+  const centerY = window.innerHeight / 1;
+  const distance = Math.sqrt((event.clientX - centerX) ** 2 + (event.clientY - centerY) ** 2);
+  const maxLineWidth = 8;
+  const lineWidth = Math.min(distance / 10, maxLineWidth);
+  discoBallCursor.style.left = `${event.clientX}px`;
+  discoBallCursor.style.top = `${event.clientY}px`;
+  const numLines = 20; // number of lines to draw
+const lineLength = 10000; // length of the lines
+
+for (let i = 0; i < numLines; i++) {
+  const line = document.createElement('div');
+  line.style.position = 'fixed';
+  line.style.width = `${lineLength}px`;
+  line.style.height = `${lineWidth}px`;
+  line.style.backgroundColor = '#24FF00';
+  line.style.opacity = '0.3';
+  line.style.transformOrigin = 'left';
+  line.style.transform = `rotate(${i * (360 / numLines)}deg)`;
+  line.style.left = `${event.clientX}px`;
+  line.style.top = `${event.clientY}px`;
+  line.style.mixBlendMode='overlay'
+
+  // add the line to the body
+  document.body.appendChild(line);
+
+  // animate the line using CSS animation
+  line.animate([
+    { transform: `rotate(${i * (360 / numLines)}deg) scale(0)` },
+    { transform: `rotate(${i * (360 / numLines)}deg) scale(1)` },
+    { transform: `rotate(${i * (360 / numLines)}deg) scale(0)` }
+  ], {
+    duration: 100,
+    iterations: Infinity,
+    easing: 'ease-in-out',
+    delay: i * 100 // delay each line animation
+  });
+
+  // remove the line from the body after the animation finishes
+  setTimeout(() => {
+    line.remove();
+  }, 1000);
+}
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ai page</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="refresh" content="50; url=./ppt2-9.html">
+  <script type="text/javascript" src="./js/script.js"></script>
+
+  <style>
+
+    body {
+      background-color: #000000; /* set the background color to black */
+      margin: 0; /* remove any default margin */
+    }
+
+.video-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.video-wrapper {
+  width: 50%;
+}
+
+#video1, #video2 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+.divider {
+  width: 10px;
+  background-color: #39FF14;
+  cursor: col-resize;
+}
+
+  </style>
+</head>
+
+
+<div class="video-container">
+    <div class="video-wrapper">
+    <video id="video1" src="./VideoFace.mp4" muted autoplay style="opacity: 10%;"></video>
+  </div>
+    <div class="divider">
+    <div class="video-wrapper">
+    <video id="video2" src="./VideoFace.mp4" muted autoplay style="opacity: 100%;"></video>
+    </div>
+
+  <script type="text/javascript">
+
+
+const divider = document.querySelector('.divider');
+const leftContainer = divider.previousElementSibling;
+const rightContainer = divider.nextElementSibling;
+let isDragging = false;
+let mouseStartPosition = null;
+let leftContainerStartWidth = null;
+let rightContainerStartWidth = null;
+
+divider.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  mouseStartPosition = e.clientX;
+  leftContainerStartWidth = leftContainer.offsetWidth;
+  rightContainerStartWidth = rightContainer.offsetWidth;
+});
+
+document.addEventListener('mousemove', (e) => {
+  if (isDragging) {
+    const mouseDeltaX = e.clientX - mouseStartPosition;
+    const newLeftContainerWidth = leftContainerStartWidth + mouseDeltaX;
+    const newRightContainerWidth = rightContainerStartWidth - mouseDeltaX;
+    leftContainer.style.width = `${newLeftContainerWidth}px`;
+    rightContainer.style.width = `${newRightContainerWidth}px`;
+  }
+});
+
+document.addEventListener('mouseup', (e) => {
+  isDragging = false;
+});
+
+
+  </script>
+</html>
+

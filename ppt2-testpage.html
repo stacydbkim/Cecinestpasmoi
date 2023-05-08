@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>scratch scratch!</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <style>
+    body {
+      background-image: url('https://media.tenor.com/wOlC5m7NikkAAAAd/제리인사-존중.gif');
+    }
+  </style>
+<body onclick="navigate()">
+    <script>
+        function navigate() {
+            window.location = "./pp2-2.html";
+        }
+    </script>
+
+
+
+
+<div id="globe-container">
+    <video id="myVidPlayer" muted autoplay style="opacity: 0.5;"></video>
+</video>
+<div class="orb"></div>
+</div>
+    <script type="text/javascript">
+    //Selector for your <video> element
+    const video = document.querySelector('#myVidPlayer');
+
+    //Core
+    window.navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+            video.srcObject = stream;
+            video.onloadedmetadata = (e) => {
+                video.play();
+            };
+        })
+        .catch( () => {
+            alert('You give browser the permission to run Webcam and mic ;( ');
+        });     
+
+
+
+</script></head>
+</body>
+
+</html>
