@@ -3,7 +3,7 @@
 <head>
   <title>google images</title>
   <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="30; url=./ppt2-6.html">
+  <meta http-equiv="refresh" content="20; url=./ppt2-6.html">
   <script type="text/javascript" src="./js/script.js"></script>
 
   <style>
@@ -17,12 +17,29 @@
       object-fit: cover;
       position: absolute;
       z-index: 1;
+      transition: transform 0.2s ease-in-out; /* Add CSS transition for smooth rotation */
     }
-
   </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var video = document.getElementById("background-video");
+      var originalTransformValue = video.style.transform;
+
+      // Shake the screen for 2 seconds when clicked
+      document.addEventListener("click", function() {
+        video.style.transform = originalTransformValue + " rotate(-35deg)";
+        setTimeout(function() {
+          video.style.transform = originalTransformValue + " rotate(35deg)";
+          setTimeout(function() {
+            video.style.transform = originalTransformValue;
+          }, 200);
+        }, 200);
+      });
+    });
+  </script>
 </head>
 <body>
-  <video id="background-video" src="./sources/google-images.mov" autoplay loop muted>
+  <video id="background-video" src="./sources/google-images.mp4" autoplay loop muted playsinline></video>
 </body>
 </html>
-

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Pixels&family=Syne+Mono&display=swap" rel="stylesheet">
+   </head>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 20px;
+      font-family: Arial, sans-serif;
+      cursor: url(./sources/redcursor.png), auto;
+      background-color: #FFFFFF;
+    }
+  
+.snowfall {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  pointer-events: none; /* Added property */
+}
+
+
+.snowfall .snowflake {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #000000;
+  animation: snowfall 5s linear infinite;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(calc(100vh + 200px));
+    opacity: 1;
+  }
+}
+
+
+.container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+    }
+   
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+    font-size: 72pt;
+    font-weight: bold;
+    font-family: 'Rubik Pixels', cursive;
+    color: #000000;
+    opacity:  70%;
+    line-height: 0.7;
+}
+
+
+.button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20pt;
+  z-index: 100; /* Updated z-index value */
+  color: white;
+  background-color: red;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+
+  
+
+    .scrollable-section {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow-y: scroll;
+      padding: 20px;
+      padding-bottom: 50px;
+      box-sizing: border-box;
+      z-index: 0;
+      font-size: 24pt;
+      color: #000000;
+      opacity: 50%;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+
+  </style>
+</head>
+<body>
+<div class="snowfall"></div>
+  <div class="container">
+    <div class="title">
+      <h1>Ceci n'est pas moi.</h1>
+<button class="button" onclick="redirectToURL('./temp.html')">--> Qui es-tu? <--</button>
+    </div>
+    <div class="scrollable-section">
+      <p><i>Ceci n'est pas moi!</i> is an interactive digital gallery composed of dynamic web pages playing in a loop. Each page visualizes an enigmatic portrayal of the author, illustrating the limitations of digital platforms in capturing the essence of our true selves. While the individuality of the pages comments on the inevitable reduction and simplification of our digital identity, the circular structure symbolizes the perpetual process of constructing and reconstructing our digital representations to fit our evolving online personas.<br><br>
+
+      In 1929, the Belgian surrealist painter René Magritte painted “The Treachery of Images,” an image of a pipe with the words ‘This is not a pipe’ under it. Magritte was questioning the relationship between language and its representation, and how meaning and understanding of reality are constructed through it. Similarly, Derrida's theory of différance questions the assumption that language can accurately represent reality due to the inherent limitation in the process of signification. Drawing upon Magritte's theory, supported by that of Derrida's, <i>Ceci n’est pas moi!</i> challenges the perception of reality and the authenticity of representation in today’s digital landscape.<br><br>
+
+      Creating an online version of oneself can be a complex endeavor. With increased accessibility in content production and distribution, we have more control over how we are perceived. These efforts for self-expression are often published and distributed through a system of digital communication, or the language of social media. However, one of the differences between the limitations in social media platforms and traditional languages is that the former is controlled by profit-driven corporations with unprecedented power to manipulate the system itself, thus affecting our perception of reality. As a result, our digital representations are often mediated through designated interfaces and structural limitations, which can lead to controlled distortion and fragmentation. For instance, no matter how hard we try to present the 'real' representation of ourselves, it will never portray reality in all its complexities, due to the inherent limitations in the digital platforms. Our stories and posts are mere transitory fragments of the myriad emotions and happenings we experience in real life, and these representational vignettes are then altered through advanced algorithms to be filtered and moderated, deciding how and when they show up on whose social media feed. Magritte’s concept takes on new meaning in this context, as it highlights the ways in which digital representations of reality can be inherently deceptive or deficient.<br><br>
+
+      In a world where technology is increasingly exerting its influence on our daily lives, it is important to critically examine its growing sociocultural implications and question the validity of the realities it presents. By challenging our own assumptions about how we make sense of the world and how we interact with and understand one another, we can begin to navigate the complexities of the digital landscape with more agency and consciousness. Ultimately, <i>Ceci n’est pas moi!</i> serves as a hopeful invitation to value authentic interaction and connection with diverse facets of ourselves—beyond the silicon screens.<br><br><br>
+      by stacy danbi kim</p>
+    </div>
+  </div>
+
+   <script>
+    // Generate snowflakes dynamically
+    var snowfallContainer = document.querySelector('.snowfall');
+
+    for (var i = 0; i < 20; i++) {
+      var snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      snowflake.style.left = Math.random() * 100 + 'vw';
+      snowflake.style.animationDelay = Math.random() * 5 + 's';
+      snowfallContainer.appendChild(snowflake);
+    }
+
+
+     function redirectToURL(url) {
+    window.location.href = url;
+  }
+  </script>
+</body>
+</html>

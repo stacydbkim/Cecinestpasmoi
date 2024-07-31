@@ -1,786 +1,151 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>strawberries</title>
+  <title>My Age</title>
   <meta charset="utf-8" />
-  <meta http-equiv="refresh" content="30; url=./ppt2-7.html">
-  <script type="text/javascript" src="./js/script.js"></script>
-
-
-  <style>
-    body {
-      background-color: #000000; /* set the background color to black */
-      margin: 0; /* remove any default margin */
-    }
-    #background-video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: fixed;
-      z-index: -1;
-    }
-  </style>
+  <meta http-equiv="refresh" content="20; url=./ppt2-7.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
 
 <style>
-      .draggable {
-        cursor: grabbing;
-        position: absolute;
-      }
-    </style>
+body {
+font-family: 'Syne Mono', monospace;
+margin: 20px;
+}
 
-  <script>   
-    var dragItem = null;
-    var offsetX = 0;
-    var offsetY = 0;
+  #clock-container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 43vh;
+  box-sizing: border-box;
+  border: 5px solid blue;
+}
 
-    function dragStart(event) {
-      event.preventDefault();
-      dragItem = event.target;
-      offsetX = event.clientX - dragItem.offsetLeft;
-      offsetY = event.clientY - dragItem.offsetTop;
-    }
+  #clock-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 43vh;
+  box-sizing: border-box;
+  border: 5px solid red;
+}
 
-    function dragEnd(event) {
-      dragItem = null;
-    }
+#move-button {
+  position: fixed;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: top 0.1s ease-out, left 0.1s ease-out;
+  overflow: hidden;
+}
 
-    function drag(event) {
-      if (dragItem) {
-        event.preventDefault();
-        dragItem.style.left = (event.clientX - offsetX) + "px";
-        dragItem.style.top = (event.clientY - offsetY) + "px";
-      }
-    }
-  </script>
-
-
-<body onmousemove="drag(event)" onmouseup="dragEnd(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/strawberry.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/banana.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
-<img id="image3" class="draggable" src="./sources/cherries.png" width="50" title="ceci n'est pas moi!" draggable="true" ondragstart="dragStart(event)">
+#move-button:hover {
+  cursor: pointer;
+}
 
 
-    <script>
-      /* Generate a random position for each image */
-      var images = document.querySelectorAll('img');
-      for (var i = 0; i < images.length; i++) {
-        var x = Math.floor(Math.random() * window.innerWidth);
-        var y = Math.floor(Math.random() * window.innerHeight);
-        images[i].style.left = x + 'px';
-        images[i].style.top = y + 'px';
-      }
-    </script>
+#clock {
+  font-size: 2.5rem;
+  text-align: center;
+}
+</style>
 
-</head>
+
 <body>
-  <video id="background-video" src="./sources/VideoFace_edited.mp4" autoplay loop muted>
-</body>
-</html>
+<center>Time Lived on Earth</center></body>
+<div id="clock-container1">
+  <h1 id="clock"></h1>
+</div>
+<br><br>
+<body><center>Time Left on Earth</center></body>
+<div id="clock-container2">
+<button id="move-button"><font color=red>Click to find out!</font></button></div>
+
+<script>
+function getTimeRemaining() {
+  var birthDate = new Date("February 16, 1992 00:00:00");
+  var currentDate = new Date();
+  
+  var totalSeconds = Math.floor((currentDate - birthDate) / 1000);
+  var years = Math.floor(totalSeconds / (365 * 24 * 60 * 60));
+  var months = Math.floor((totalSeconds - years * 365 * 24 * 60 * 60) / (30 * 24 * 60 * 60));
+  var days = Math.floor((totalSeconds - years * 365 * 24 * 60 * 60 - months * 30 * 24 * 60 * 60) / (24 * 60 * 60));
+  var hours = Math.floor((totalSeconds - years * 365 * 24 * 60 * 60 - months * 30 * 24 * 60 * 60 - days * 24 * 60 * 60) / (60 * 60));
+  var minutes = Math.floor((totalSeconds - years * 365 * 24 * 60 * 60 - months * 30 * 24 * 60 * 60 - days * 24 * 60 * 60 - hours * 60 * 60) / 60);
+  var seconds = Math.floor(totalSeconds - years * 365 * 24 * 60 * 60 - months * 30 * 24 * 60 * 60 - days * 24 * 60 * 60 - hours * 60 * 60 - minutes * 60);
+  
+  return {
+    'years': years,
+    'months': months,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock() {
+  var clock = document.getElementById('clock');
+
+  function updateClock() {
+    var t = getTimeRemaining();
+
+    clock.innerHTML = t.years + ' years<br>' +
+                      t.months + ' months<br>' +
+                      t.days + ' days<br>' +
+                      t.hours + ' hours<br>' +
+                      t.minutes + ' minutes<br>' +
+                      t.seconds + ' seconds';
+  }
+
+  updateClock();
+  setInterval(updateClock, 1000);
+}
+
+initializeClock();
+</script>
+
+<script>
+const moveButton = document.getElementById('move-button');
+let isMoving = false;
+const margin = 20;
+
+moveButton.addEventListener('mouseenter', function() {
+  if (!isMoving) {
+    // Set the flag to true to prevent multiple animations
+    isMoving = true;
+
+    // Calculate a random position within the viewport
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const buttonRect = moveButton.getBoundingClientRect();
+    const borderSize = 5;
+    const maxTop = viewportHeight - buttonRect.height - borderSize - margin;
+    const maxLeft = viewportWidth - buttonRect.width - borderSize - margin;
+    const randomTop = Math.floor(Math.random() * maxTop);
+    const randomLeft = Math.floor(Math.random() * maxLeft);
+
+    // Move the button to the random position over 0.5s
+    moveButton.style.top = randomTop + 'px';
+    moveButton.style.left = randomLeft + 'px';
+
+    // After 0.5s, set the flag back to false to allow another animation
+    setTimeout(function() {
+      isMoving = false;
+    }, 500);
+  }
+});
+
+
+</script>
+
+
+
+
