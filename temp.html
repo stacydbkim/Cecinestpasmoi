@@ -31,24 +31,24 @@
   </div>
 
 
-  <script>
-    window.onload = function() {
-      var countdownElement = document.getElementById("countdown");
-      var count = 10;
+<script>
+  window.onload = function() {
+    var countdownElement = document.getElementById("countdown");
+    var count = 10;
+    countdownElement.innerHTML = count;
+
+    var countdown = setInterval(function() {
+      count--;
       countdownElement.innerHTML = count;
 
-      var countdown = setInterval(function() {
-        count--;
-        countdownElement.innerHTML = count;
-
-        if (count <= 0) {
-          clearInterval(countdown);
-          // Redirect to the next page here
-          window.location.href = "url=./ppt2-3.html";
-        }
-      }, 1000);
-    }
-  </script>
+      if (count <= 0) {
+        clearInterval(countdown);
+        // Correct the redirect URL here
+        window.location.href = "./ppt2-3.html";
+      }
+    }, 1000);
+  }
+</script>
 
 
 </body>
